@@ -1,243 +1,241 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="title" content="Kaushik Patel - Senior React Native Developer">
-<meta name="description" content="6.7+ years experience in React Native, Android, iOS, TV-OS development. Mobile & TV app specialist.">
-<meta name="keywords" content="React Native Developer, Android TV Developer, Apple TV Developer, React Native Expert India, Mobile Developer Surat, Kaushik Patel">
-<meta property="og:title" content="Kaushik Patel - React Native Developer">
-<meta property="og:description" content="Senior React Native Developer | 7.10 years | Mobile & TV-OS Specialist">
-<meta property="og:image" content="kaushikPatel.png">
-  <title>Kaushik Patel — Senior React Native Developer</title>
-  <meta name="description" content="Kaushik Patel — Senior React Native Developer | Mobile & TV-OS Specialist" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --muted:#94a3b8;
-      --accent:#06b6d4;
-      --glass: rgba(255,255,255,0.03);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,var(--bg),#071025 60%)}
-    .container{max-width:1100px;margin:40px auto;padding:28px}
-
-    /* Header */
-    header{display:flex;align-items:center;gap:22px}
-    .avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042f34;font-size:38px;border:4px solid rgba(255,255,255,0.06)}
-    .hero h1{margin:0;font-size:28px}
-    .hero .title{font-size:20px;color:var(--accent);margin-top:6px}
-    .hero p{margin:8px 0 0;color:var(--muted);max-width:720px}
-
-    /* layout */
-    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:26px}
-    @media(min-width:880px){.grid{grid-template-columns:320px 1fr}}
-
-    /* sidebar */
-    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-    .section-title{font-weight:700;margin-bottom:12px}
-    .meta{color:var(--muted);font-size:14px}
-    .skill{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .skill .chip{background:var(--glass);padding:8px 10px;border-radius:999px;font-weight:600;font-size:13px;color:#d6eef7}
-    .contact a{display:inline-block;margin-right:10px;color:var(--accent);text-decoration:none}
-
-    /* main */
-    main .card{padding:22px}
-    .about p{color:var(--muted);line-height:1.6}
-    .projects{display:grid;gap:14px}
-    .project{display:flex;gap:14px;align-items:flex-start;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.02)}
-    .project .meta{font-size:13px}
-    .project h3{margin:0;font-size:16px}
-    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#3b82f6);color:#012; font-weight:700;text-decoration:none}
-
-    footer{margin-top:22px;color:var(--muted);font-size:14px;text-align:center}
-
-    /* small touches */
-    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
-    .badge{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);font-weight:700}
-
-    .avatar img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid #4CAF50; /* change color */
-      object-fit: cover;
-    }
-
-    /* responsive tweaks */
-    @media(max-width:420px){.avatar{width:92px;height:92px;font-size:30px}.container{padding:16px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaushik Patel | Senior React Native Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b1120; color: #f8fafc; scroll-behavior: smooth; }
+        .glass-card { background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .glass-card:hover { border-color: #3b82f6; transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .tech-tag { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 4px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
+        .timeline-line { position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #3b82f6, #1e293b); }
+        .code-window { background: #011627; border-radius: 12px; border: 1px solid #1e293b; font-family: monospace; }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Hidden SEO -->
-    <p align="center">
-      <span style="display:none">
-        Kaushik Patel | Senior React Native Developer | React Native TV-OS | Android TV | Apple TV | Mobile App Developer | 6.7 Years Experience | India | Surat
-      </span>
-    </p>
-    <header>
-     <div class="avatar">
-      <img src="kaushikPatel.png" alt="Kaushik Patel" />
-    </div>
-      <div class="hero">
-        <h1>Kaushik Patel</h1>
-        <div class="title">React Native Mobile App Developer (7.10+ Years Experience)</div>
-        <p>React Native Developer specializing in iOS, Android & TV OS with 7.10 years of experience building high‑performance, scalable, and user‑centric applications. Strong in clean architecture, state management, and performance optimization.</p>
-      </div>
-       
-      </div>
-    </header>
 
-    <div class="grid">
-      <!-- SIDEBAR -->
-      <aside class="card">
-        <div class="section-title">Contact</div>
-        <div class="meta">
-          📍 Surat, Gujarat, India<br>
-          📞 +91 83475 38090<br>
-          ✉️ <a href="mailto:patelkaushik08dec@gmail.com">patelkaushik08dec@gmail.com</a><br>
-          🔗 <a href="https://github.com/kaushik038" target="_blank" style="color:var(--accent)">GitHub</a>
+    <nav class="fixed w-full z-50 bg-[#0b1120]/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fab fa-react text-2xl text-[#61DAFB]"></i>
+                <span class="text-xl font-bold tracking-tighter">KAUSHIK<span class="text-blue-500">.</span>JS</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Work</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="mailto:patelkaushik08dec@gmail.com" class="text-blue-400 border border-blue-400/50 px-4 py-1.5 rounded-full hover:bg-blue-400 hover:text-white transition">Hire Me</a>
+            </div>
         </div>
+    </nav>
 
-     <hr style="margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
-
-        <div class="section-title">Skills</div>
-        <div class="skill">
-          <div class="chip">JavaScript</div>
-          <div class="chip">TypeScript</div>
-          <div class="chip">React Native</div>
-          <div class="chip">Redux</div>
-          <div class="chip">React Navigation</div>
-          <div class="chip">Expo</div>
-          <div class="chip">REST APIs</div>
-          <div class="chip">GraphQL</div>
-          <div class="chip">WebSockets</div>
-          <div class="chip">Firebase</div>
-          <div class="chip">SQLite</div>
-          <div class="chip">Realm</div>
-          <div class="chip">Git</div>
-          <div class="chip">Google Cloud</div>
-          <div class="chip">Jest</div>
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+                <h2 class="text-blue-500 font-mono mb-4">Senior Mobile Architect</h2>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Kaushik Patel</h1>
+                <p class="text-xl text-slate-400 mb-8 leading-relaxed max-w-xl">
+                    Crafting premium <span class="text-white">Android, iOS, and TV applications</span> with 7.11 years of deep expertise in the React Native ecosystem.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-lg border border-white/5"><i class="fab fa-android text-green-400"></i> Android TV</div>
+                    <div class="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-lg border border-white/5"><i class="fab fa-apple text-slate-300"></i> Apple TV</div>
+                    <div class="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-lg border border-white/5"><i class="fab fa-react text-blue-400"></i> React Native</div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="code-window p-6 shadow-2xl relative z-10">
+                    <div class="flex gap-2 mb-6">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="space-y-2 text-sm md:text-base font-mono">
+                        <p><span class="text-pink-500">class</span> <span class="text-yellow-400">KaushikPatel</span> {</p>
+                        <p class="pl-4"><span class="text-blue-400">constructor</span>() {</p>
+                        <p class="pl-8 text-slate-300">this.exp = <span class="text-orange-400">7.11</span>;</p>
+                        <p class="pl-8 text-slate-300">this.role = <span class="text-green-400">'Senior React Native'</span>;</p>
+                        <p class="pl-8 text-slate-300">this.focus = <span class="text-green-400">'Scalable Architecture'</span>;</p>
+                        <p class="pl-4">}</p>
+                        <p class="pl-4"><span class="text-blue-400">optimizePerformance</span>() {</p>
+                        <p class="pl-8 text-slate-500">// Returns 25% faster load times</p>
+                        <p class="pl-8 text-pink-500">return <span class="text-slate-300">true</span>;</p>
+                        <p class="pl-4">}</p>
+                        <p>}</p>
+                    </div>
+                </div>
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl"></div>
+            </div>
         </div>
+    </section>
 
-    
- <hr style="margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
-        <div class="section-title">Tech</div>
-        <div class="meta">React Native • JS/TS • Node.js • GraphQL • Firebase • Git • CI/CD</div>
+    <section id="skills" class="py-24 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-12 flex items-center gap-4">
+                <span class="text-blue-500 text-sm font-mono">01.</span> Technical Stack
+            </h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-xl">
+                    <h4 class="text-blue-400 font-bold mb-4">Core</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">React Native</span><span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">JavaScript</span><span class="tech-tag">React.js</span>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-xl">
+                    <h4 class="text-blue-400 font-bold mb-4">State & Data</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Redux</span><span class="tech-tag">Context API</span>
+                        <span class="tech-tag">GraphQL</span><span class="tech-tag">REST APIs</span>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-xl">
+                    <h4 class="text-blue-400 font-bold mb-4">Storage</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Firebase</span><span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Realm</span><span class="tech-tag">NoSQL</span>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-xl">
+                    <h4 class="text-blue-400 font-bold mb-4">Tools</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Xcode</span><span class="tech-tag">Android Studio</span>
+                        <span class="tech-tag">Git</span><span class="tech-tag">Jest</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <hr style="margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
-
-        <div class="section-title">Availability</div>
-        <div class="meta">Open to new opportunities • Available for remote or hybrid roles</div>
-
-      </aside>
-
-      <!-- MAIN -->
-      <main>
-        <section class="card about">
-          <div class="section-title">About Me</div>
-          <p>I build production-grade mobile applications with an emphasis on maintainable architecture, great UX and high performance. I have shipped apps for mobile and TV platforms, handled complex focus/navigation issues for TV, implemented video & podcast modules and improved app startup & runtime performance for large codebases.</p>
-    
-        </section>
-
-        <section class="card" style="margin-top:14px">
-          <div class="section-title">Selected Projects</div>
-          <div class="projects">
-
-            <article class="project">
-              <div style="flex:1">
-                <h3>Cappital Media Platform</h3>
-                <div class="meta">React Native • Android TV • Apple TV • Streaming • Podcast</div>
-                <p class="meta" style="margin-top:8px;color:var(--muted)">Built a full media streaming ecosystem for mobile + TV OS. Developed complete TV OS app, focus engine, video module (quality levels, watch history, mini‑player), podcast module (background playback), Collections, Tags, and Article modules.</p>
-              </div>
-              <div style="min-width:120px;text-align:right">
-                <div class="tag">Lead Developer</div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div style="flex:1">
-                <h3>Tabyt</h3>
-                <div class="meta">React Native • QR Scan • Donation Platform</div>
-                   <p class="meta" style="margin-top:8px;color:var(--muted)">Built features like ticketing, event management, menu display & reservation system.</p>
-              </div>
-              <div style="min-width:120px;text-align:right">
-                <div class="tag">Developer</div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div style="flex:1">
-                <h3>PrettyFox</h3>
-                <div class="meta">React Native • Marketplace • Events</div>
-                <p class="meta" style="margin-top:8px;color:var(--muted)">Beauty & salon marketplace app with product listings, events, and location‑based discovery.</p>
-              </div>
-              <div style="min-width:120px;text-align:right">
-                <div class="tag">Senior Developer</div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div style="flex:1">
-                <h3>Valkyrie</h3>
-                <div class="meta">React Native • Laundry Service • Order Flow</div>
-                <p class="meta" style="margin-top:8px;color:var(--muted)">Laundry service app with scheduling, order tracking, and dynamic pricing flow.</p>
-              </div>
-              <div style="min-width:120px;text-align:right">
-                <div class="tag">Developer</div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div style="flex:1">
-                <h3>Carfour</h3>
-                <div class="meta">Flutter • Multi‑Service Marketplace</div>
-                <p class="meta" style="margin-top:8px;color:var(--muted)">Voucher donation platform with QR scanning, secure voucher transfer, and advanced search features.</p>
-             
-              </div>
-              <div style="min-width:120px;text-align:right">
-                <div class="tag">Flutter Developer</div>
-              </div>
-            </article>
-
-          </div>
-               
-            </article>
-
-
-
-
+    <section id="experience" class="py-24 px-6 max-w-5xl mx-auto relative">
+        <h3 class="text-3xl font-bold mb-16 flex items-center gap-4">
+            <span class="text-blue-500 text-sm font-mono">02.</span> Professional Journey
+        </h3>
+        <div class="timeline-line"></div>
         
+        <div class="space-y-16">
+            <div class="relative pl-16">
+                <div class="absolute left-0 top-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                    <i class="fas fa-briefcase text-xs text-white"></i>
+                </div>
+                <span class="text-blue-400 font-mono text-sm uppercase">May 2024 — Present</span>
+                <h4 class="text-2xl font-bold text-white mt-1">Logicwind <span class="text-slate-500 text-lg font-normal">— React Native Developer</span></h4>
+                <p class="text-slate-400 mt-4 leading-relaxed">Implementing scalable application architecture using Redux and Context API. Leading performance optimization efforts resulting in improved UI responsiveness and cross-platform stability for Android/iOS.</p>
+            </div>
 
-          </div>
-        </section>
+            <div class="relative pl-16">
+                <div class="absolute left-0 top-0 w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10">
+                    <i class="fas fa-briefcase text-xs text-white"></i>
+                </div>
+                <span class="text-slate-500 font-mono text-sm uppercase">Oct 2022 — Apr 2024</span>
+                <h4 class="text-2xl font-bold text-white mt-1">Techtic Technolab <span class="text-slate-500 text-lg font-normal">— Sr. React Native Developer</span></h4>
+                <p class="text-slate-400 mt-4 leading-relaxed">Handled complex application states with Redux. Integrated high-priority third-party services including payment gateways, mapping APIs, and social media authentication layers.</p>
+            </div>
 
-        <section class="card" id="contact" style="margin-top:14px">
-          <div class="section-title">Contact & Resume</div>
-          <p class="meta">Want the full resume or project screenshots? Download my resume or send a quick message.</p>
-          <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
-            <a class="cta" href="https://github.com/kaushik038/kaushik.patel.github.io/blob/main/Kaushik-Resume.pdf" >Download Resume</a>
-            <a class="cta" href="mailto:patelkaushik08dec@gmail.com?subject=Opportunity%20for%20Kaushik">Email Me</a>
-            <a class="cta" href="https://www.linkedin.com/in/patel-kaushik-701a9515b/" >LinkedIn</a>
-          </div>
-        </section>
+            <div class="relative pl-16">
+                <div class="absolute left-0 top-0 w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10">
+                    <i class="fas fa-briefcase text-xs text-white"></i>
+                </div>
+                <span class="text-slate-500 font-mono text-sm uppercase">Dec 2020 — Oct 2022</span>
+                <h4 class="text-2xl font-bold text-white mt-1">LogixBuilt <span class="text-slate-500 text-lg font-normal">— Sr. React Native Developer</span></h4>
+                <p class="text-slate-400 mt-4 leading-relaxed">Managed the complete SDLC for multiple projects. Ensured 100% full compatibility across Android and iOS platforms while maintaining clean, reusable component libraries.</p>
+            </div>
 
-      </main>
-    </div>
+            <div class="relative pl-16">
+                <div class="absolute left-0 top-0 w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10">
+                    <i class="fas fa-briefcase text-xs text-white"></i>
+                </div>
+                <span class="text-slate-500 font-mono text-sm uppercase">Feb 2018 — Nov 2020</span>
+                <h4 class="text-2xl font-bold text-white mt-1">I-Pangram <span class="text-slate-500 text-lg font-normal">— React Native Developer</span></h4>
+                <p class="text-slate-400 mt-4 leading-relaxed">Built and maintained cross-platform applications. Focused on feature enhancement and bug-fixing for large-scale existing applications.</p>
+            </div>
+        </div>
+    </section>
 
-    <footer>© <span id="year"></span> Kaushik Patel — Built with ❤️ • Made for React Native & TV apps</footer>
-  </div>
+    <section id="projects" class="py-24 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-12 text-center">Featured Solutions</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl border-t-4 border-t-blue-500">
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fas fa-tv text-3xl text-blue-500"></i>
+                        <span class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">MOBILE/TV</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Media Platform</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Advanced video controls & custom focus engine for Android TV and Apple TV navigation.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] font-mono text-slate-500">HLS</span>
+                        <span class="text-[10px] font-mono text-slate-500">VOD</span>
+                    </div>
+                </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Helpful comments:
-    // - Replace 'your-email@example.com' and social links with your real addresses
-    // - Swap the avatar with an <img> if you have a profile picture
-    // - Replace project placeholders with real project descriptions & repo links
-    // - To host: push index.html to a GitHub repo and enable GitHub Pages
-  </script>
+                <div class="glass-card p-8 rounded-2xl border-t-4 border-t-purple-500">
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fas fa-ticket-alt text-3xl text-purple-500"></i>
+                        <span class="text-[10px] bg-purple-500/10 text-purple-400 px-2 py-1 rounded">FINTECH</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">TBYT</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Ticketing and table reservations with integrated real-time expense splitting.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] font-mono text-slate-500">STRIPE</span>
+                        <span class="text-[10px] font-mono text-slate-500">WEBSOCKET</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border-t-4 border-t-green-500">
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fas fa-car text-3xl text-green-500"></i>
+                        <span class="text-[10px] bg-green-500/10 text-green-400 px-2 py-1 rounded">FLUTTER</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Carfour</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">QR-based voucher donation system for sports and local community clubs.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] font-mono text-slate-500">QR CORE</span>
+                        <span class="text-[10px] font-mono text-slate-500">GEOLOCATION</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <h3 class="text-2xl font-bold mb-12">Education</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="p-6 border border-white/5 rounded-xl bg-slate-800/20">
+                <h5 class="text-blue-400 font-bold">MCA (Master of Computer Application)</h5>
+                <p class="text-slate-300 text-sm mt-1">Gujarat Technological University</p>
+                <span class="text-slate-500 text-xs italic">GPA: 8.0 | 2016 - 2018</span>
+            </div>
+            <div class="p-6 border border-white/5 rounded-xl bg-slate-800/20">
+                <h5 class="text-blue-400 font-bold">BCA (Bachelor of Computer Application)</h5>
+                <p class="text-slate-300 text-sm mt-1">VNSGU, Surat</p>
+                <span class="text-slate-500 text-xs italic">GPA: 7.3 | 2013 - 2016</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <h4 class="text-xl font-bold mb-2">Let's build something epic.</h4>
+                <p class="text-slate-500">Currently taking on senior-level mobile & TV engineering roles.</p>
+            </div>
+            <div class="flex gap-6 text-2xl text-slate-400">
+                <a href="mailto:patelkaushik08dec@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/patel-kaushik-701a9515b/" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/kaushik038" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="mt-16 text-center text-slate-600 text-[10px] uppercase tracking-[0.2em]">
+            &copy; 2025 Kaushik Patel // Built with React Native Mindset
+        </div>
+    </footer>
+
 </body>
 </html>
