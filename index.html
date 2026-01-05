@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaushik Patel | Senior React Native Architect</title>
+    <title>Kaushik Patel | Senior React Native Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -17,16 +17,16 @@
         .glass-card:hover { border-color: #3b82f6; transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
         
         .tech-tag { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 4px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
-        .timeline-line { position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #3b82f6, #1e293b); }
         
         .code-window { background: #011627; border-radius: 12px; border: 1px solid #1e293b; font-family: monospace; }
         
-        /* Floating Animation for Photo & Terminal */
         .animate-float { animation: float 6s ease-in-out infinite; }
         @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
 
-        /* Profile Glow Effect */
         .profile-border { padding: 4px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 50%; box-shadow: 0 0 25px rgba(59, 130, 246, 0.4); }
+        
+        .custom-scroll::-webkit-scrollbar { width: 5px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
     </style>
 </head>
 <body>
@@ -38,11 +38,11 @@
                 <i class="fab fa-react text-2xl text-[#61DAFB] animate-spin-slow"></i>
                 <span class="text-xl font-bold tracking-tighter uppercase">Kaushik<span class="text-blue-500">.</span>Patel</span>
             </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium">
+            <div class="hidden md:flex gap-8 text-sm font-medium items-center">
                 <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
                 <a href="#projects" class="hover:text-blue-400 transition">Work</a>
                 <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-                <a href="mailto:patelkaushik08dec@gmail.com" class="text-blue-400 border border-blue-400/50 px-5 py-2 rounded-full hover:bg-blue-400 hover:text-white transition">Get In Touch</a>
+                <a href="mailto:patelkaushik08dec@gmail.com" class="text-blue-400 border border-blue-400/50 px-5 py-2 rounded-full hover:bg-blue-400 hover:text-white transition">Hire Me</a>
             </div>
         </div>
     </nav>
@@ -53,12 +53,13 @@
                 <h2 class="text-blue-500 font-mono mb-4 text-lg">Senior Software Engineer</h2>
                 <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tight text-white">Kaushik Patel</h1>
                 <p class="text-xl text-slate-400 mb-8 leading-relaxed max-w-xl">
-                    Architecting high-performance <span class="text-blue-400">Mobile & TV</span> applications. 7.11 years of experience turning complex ideas into scalable code.
+                    Turning complex ideas into scalable code with <span class="text-blue-400"><span class="exp-years">8</span></span> years</span> of expertise in building high-performance <span class="text-blue-400">Mobile & TV</span> ecosystems.
                 </p>
                 <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center gap-2 bg-slate-800/40 px-4 py-2 rounded-lg border border-white/5 shadow-xl"><i class="fab fa-react text-blue-400"></i> React Native</div>
                     <div class="flex items-center gap-2 bg-slate-800/40 px-4 py-2 rounded-lg border border-white/5 shadow-xl"><i class="fab fa-android text-green-400"></i> Android TV</div>
                     <div class="flex items-center gap-2 bg-slate-800/40 px-4 py-2 rounded-lg border border-white/5 shadow-xl"><i class="fab fa-apple text-slate-300"></i> Apple TV</div>
-                    <div class="flex items-center gap-2 bg-slate-800/40 px-4 py-2 rounded-lg border border-white/5 shadow-xl"><i class="fab fa-react text-blue-400"></i> React Native</div>
+                    <div class="flex items-center gap-2 bg-slate-800/40 px-4 py-2 rounded-lg border border-white/5 shadow-xl"><i class="fas fa-mobile-alt text-purple-400"></i> Flutter</div>
                 </div>
             </div>
 
@@ -76,15 +77,15 @@
                         <div class="w-3 h-3 rounded-full bg-green-500"></div>
                     </div>
                     <div class="space-y-2 text-sm md:text-base font-mono mt-4">
-                        <p><span class="text-pink-500">const</span> <span class="text-yellow-400">profile</span> = {</p>
-                        <p class="pl-4">experience: <span class="text-orange-400">7.11</span>, <span class="text-slate-500">// Years</span></p>
-                        <p class="pl-4">role: <span class="text-green-400">'Senior RN Engineer'</span>,</p>
-                        <p class="pl-4">degree: <span class="text-green-400">'MCA'</span>,</p>
-                        <p class="pl-4">location: <span class="text-green-400">'Surat, IN'</span></p>
+                        <p><span class="text-pink-500">const</span> <span class="text-yellow-400">developer</span> = {</p>
+                        <p class="pl-4">exp_years: <span class="text-orange-400">8</span>,</p>
+                        <p class="pl-4">specialty: <span class="text-green-400">'Cross-Platform TV & Mobile'</span>,</p>
+                        <p class="pl-4">architecture: <span class="text-green-400">'Scalable UI & Performance'</span>,</p>
+                        <p class="pl-4">status: <span class="text-green-400">'Ready to Build'</span></p>
                         <p><span class="text-pink-500">}</span>;</p>
                         <br>
-                        <p class="text-blue-400">// Ready for new challenges</p>
-                        <p class="text-white">hireMe();</p>
+                        <p class="text-blue-400">// Transforming UX since 2018</p>
+                        <p class="text-white">kaushik.optimize();</p>
                     </div>
                 </div>
                 <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-600/30 rounded-full blur-[100px] z-0"></div>
@@ -93,194 +94,180 @@
     </section>
 
     <section id="skills" class="py-24 bg-slate-900/30">
-        <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
-            <h3 class="text-3xl font-bold mb-12 flex items-center gap-4 justify-center md:justify-start">
-                <span class="text-blue-500 text-sm font-mono">01.</span> Tech Stack
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-12 flex items-center gap-4">
+                <span class="text-blue-500 text-sm font-mono">01.</span> Core Competencies
             </h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="glass-card p-6 rounded-xl">
-                    <h4 class="text-blue-400 font-bold mb-4">Core</h4>
-                    <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                    <h4 class="text-blue-400 font-bold mb-4"><i class="fas fa-layer-group mr-2"></i>Frontend</h4>
+                    <div class="flex flex-wrap gap-2">
                         <span class="tech-tag">React Native</span><span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">JavaScript</span><span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Next.js</span><span class="tech-tag">JavaScript ES6+</span>
+                        <span class="tech-tag">Flutter</span>
                     </div>
                 </div>
                 <div class="glass-card p-6 rounded-xl">
-                    <h4 class="text-blue-400 font-bold mb-4">State & Data</h4>
-                    <div class="flex flex-wrap gap-2 justify-center md:justify-start">
-                        <span class="tech-tag">Redux</span><span class="tech-tag">Context API</span>
-                        <span class="tech-tag">GraphQL</span><span class="tech-tag">REST APIs</span>
+                    <h4 class="text-blue-400 font-bold mb-4"><i class="fas fa-database mr-2"></i>State & Data</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Redux-Saga/Thunk</span><span class="tech-tag">React Query</span>
+                        <span class="tech-tag">Context API</span><span class="tech-tag">GraphQL</span>
+                        <span class="tech-tag">REST APIs</span>
                     </div>
                 </div>
                 <div class="glass-card p-6 rounded-xl">
-                    <h4 class="text-blue-400 font-bold mb-4">Storage</h4>
-                    <div class="flex flex-wrap gap-2 justify-center md:justify-start">
-                        <span class="tech-tag">Firebase</span><span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">Realm</span><span class="tech-tag">WebSocket</span>
+                    <h4 class="text-blue-400 font-bold mb-4"><i class="fas fa-tv mr-2"></i>Specialized</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Android TV</span><span class="tech-tag">Apple TV</span>
+                        <span class="tech-tag">HLS/Dash</span><span class="tech-tag">Focus Engine</span>
+                        <span class="tech-tag">Video Player Optimization</span>
                     </div>
                 </div>
                 <div class="glass-card p-6 rounded-xl">
-                    <h4 class="text-blue-400 font-bold mb-4">Development</h4>
-                    <div class="flex flex-wrap gap-2 justify-center md:justify-start">
-                        <span class="tech-tag">Xcode</span><span class="tech-tag">Android Studio</span>
-                        <span class="tech-tag">Git</span><span class="tech-tag">Jest</span>
+                    <h4 class="text-blue-400 font-bold mb-4"><i class="fas fa-tools mr-2"></i>Infrastructure</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Firebase</span><span class="tech-tag">CI/CD</span>
+                        <span class="tech-tag">WebSocket</span><span class="tech-tag">Realm/SQLite</span>
+                        <span class="tech-tag">Jest</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 px-6 max-w-5xl mx-auto relative">
+    <section id="experience" class="py-24 px-6 max-w-5xl mx-auto">
         <h3 class="text-3xl font-bold mb-16 flex items-center gap-4">
-            <span class="text-blue-500 text-sm font-mono">02.</span> Professional Journey
+            <span class="text-blue-500 text-sm font-mono">02.</span> Professional Experience
         </h3>
-      
         
         <div class="space-y-16">
             <div class="relative pl-16">
                 <div class="absolute left-0 top-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]">
                     <i class="fas fa-briefcase text-xs text-white"></i>
                 </div>
-                <span class="text-blue-400 font-mono text-sm">MAY 2024 — PRESENT</span>
-                <h4 class="text-2xl font-bold text-white mt-1">Logicwind <span class="text-slate-500 font-normal">| RN Developer</span></h4>
-                <p class="text-slate-400 mt-4">Architecting scalable apps using Redux and Context API. Optimizing performance for superior UX on high-end and budget devices.</p>
+                <span class="text-blue-400 font-mono text-sm uppercase">May 2024 — Dec 2025</span>
+                <h4 class="text-2xl font-bold text-white mt-1">Logicwind <span class="text-slate-500 font-normal">| Senior React Native Developer</span></h4>
+                <ul class="text-slate-400 mt-4 list-disc space-y-2 pl-4">
+                    <li>Architected scalable mobile solutions reducing technical debt via clean code principles.</li>
+                    <li>Increased user retention by 25% through startup time and frame rate optimization.</li>
+                    <li>Led code reviews and mentored junior developers to maintain 100% industry standards.</li>
+                </ul>
             </div>
 
             <div class="relative pl-16">
                 <div class="absolute left-0 top-0 w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10">
                     <i class="fas fa-briefcase text-xs text-white"></i>
                 </div>
-                <span class="text-slate-500 font-mono text-sm">OCT 2022 — APR 2024</span>
-                <h4 class="text-2xl font-bold text-white mt-1">Techtic Technolab <span class="text-slate-500 font-normal">| Sr. RN Developer</span></h4>
-                <p class="text-slate-400 mt-4">Integrated critical services like payment gateways and maps. Mastered state management for heavy-data applications.</p>
+                <span class="text-slate-500 font-mono text-sm uppercase">Oct 2022 — Apr 2024</span>
+                <h4 class="text-2xl font-bold text-white mt-1">Techtic Technolab <span class="text-slate-500 font-normal">| Sr. React Native Developer</span></h4>
+                <ul class="text-slate-400 mt-4 list-disc space-y-2 pl-4">
+                    <li>Engineered complex Stripe/Razorpay payment gateways and Google Maps API integrations.</li>
+                    <li>Developed predictable Redux data flow improving stability across fragmented Android versions.</li>
+                    <li>Translated high-fidelity Figma designs into pixel-perfect responsive components.</li>
+                </ul>
             </div>
 
             <div class="relative pl-16">
                 <div class="absolute left-0 top-0 w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10">
                     <i class="fas fa-briefcase text-xs text-white"></i>
                 </div>
-                <span class="text-slate-500 font-mono text-sm">DEC 2020 — OCT 2022</span>
-                <h4 class="text-2xl font-bold text-white mt-1">LogixBuilt <span class="text-slate-500 font-normal">| Sr. RN Developer</span></h4>
-                <p class="text-slate-400 mt-4">Full lifecycle ownership of cross-platform apps. Guaranteed stability across iOS and Android ecosystems.</p>
+                <span class="text-slate-500 font-mono text-sm uppercase">Dec 2020 — Oct 2022</span>
+                <h4 class="text-2xl font-bold text-white mt-1">LogixBuilt <span class="text-slate-500 font-normal">| React Native Developer</span></h4>
+                <p class="text-slate-400 mt-4">Owned the full SDLC for 3+ major client projects, managing everything from requirement gathering to Play Store/App Store deployment.</p>
             </div>
 
             <div class="relative pl-16">
                 <div class="absolute left-0 top-0 w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10">
                     <i class="fas fa-briefcase text-xs text-white"></i>
                 </div>
-                <span class="text-slate-500 font-mono text-sm">FEB 2018 — NOV 2020</span>
-                <h4 class="text-2xl font-bold text-white mt-1">I-Pangram <span class="text-slate-500 font-normal">| RN Developer</span></h4>
-                <p class="text-slate-400 mt-4">Started the journey by maintaining and scaling high-quality mobile products with React Native.</p>
+                <span class="text-slate-500 font-mono text-sm uppercase">Feb 2018 — Nov 2020</span>
+                <h4 class="text-2xl font-bold text-white mt-1">I-Pangram <span class="text-slate-500 font-normal">| React Native Developer</span></h4>
+                <p class="text-slate-400 mt-4">Developed high-performance UI and local data persistence via Realm for early-stage startup products.</p>
             </div>
         </div>
     </section>
+
     <section id="projects" class="py-24 bg-slate-900/50 px-6">
-    <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold flex items-center gap-4 justify-center">
-                <span class="text-blue-500 text-sm font-mono">03.</span> Featured Projects
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl font-bold mb-16 flex items-center gap-4">
+                <span class="text-blue-500 text-sm font-mono">03.</span> Key Projects
             </h3>
-            <p class="text-slate-500 mt-4 italic">Hover over cards to see technical details</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl aspect-video glass-card border-blue-500/20">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-900/40 flex flex-col items-center justify-center p-6 text-center">
+                        <i class="fas fa-tv text-5xl text-blue-400 mb-4"></i>
+                        <h4 class="text-xl font-bold text-white">Media Platform</h4>
+                        <p class="text-xs text-blue-300 font-mono mt-2 uppercase">TV & Mobile Streaming</p>
+                    </div>
+                    <div class="absolute inset-0 bg-[#0b1120] p-6 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <h4 class="text-lg font-bold text-blue-400 mb-2 text-sm">Custom Player & UI</h4>
+                        <ul class="text-[12px] text-slate-300 space-y-1 mb-4">
+                            <li>• Video/Podcast Carousel & Grids</li>
+                            <li>• Custom Play/Pause/Seek controls</li>
+                            <li>• Background audio for podcasts</li>
+                            <li>• Featured media management</li>
+                        </ul>
+                        <div class="flex gap-2">
+                            <span class="tech-tag text-[10px]">React Native</span>
+                            <span class="tech-tag text-[10px]">React Native TV OS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl aspect-video glass-card border-purple-500/20">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-900/40 flex flex-col items-center justify-center p-6 text-center">
+                        <i class="fas fa-ticket-alt text-5xl text-purple-400 mb-4"></i>
+                        <h4 class="text-xl font-bold text-white">TBYT Platform</h4>
+                        <p class="text-xs text-purple-300 font-mono mt-2 uppercase">Event Management</p>
+                    </div>
+                    <div class="absolute inset-0 bg-[#0b1120] p-6 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <h4 class="text-lg font-bold text-purple-400 mb-2 text-sm">Organizer & User Apps</h4>
+                        <ul class="text-[12px] text-slate-300 space-y-1 mb-4">
+                            <li>• Location-based event discovery</li>
+                            <li>• Ticket & Menu booking flows</li>
+                            <li>• Table configuration dashboard</li>
+                            <li>• Scalable reusable components</li>
+                        </ul>
+                        <div class="flex gap-2">
+                            <span class="tech-tag text-[10px]">React Native</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl aspect-video glass-card border-green-500/20">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-600/20 to-emerald-900/40 flex flex-col items-center justify-center p-6 text-center">
+                        <i class="fas fa-hand-holding-heart text-5xl text-green-400 mb-4"></i>
+                        <h4 class="text-xl font-bold text-white">Carfour</h4>
+                        <p class="text-xs text-green-300 font-mono mt-2 uppercase">Donation Service</p>
+                    </div>
+                    <div class="absolute inset-0 bg-[#0b1120] p-6 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <h4 class="text-lg font-bold text-green-400 mb-2 text-sm">Offline QR Donations</h4>
+                        <ul class="text-[12px] text-slate-300 space-y-1 mb-4">
+                            <li>• Offline QR scanning & sync</li>
+                            <li>• Custom validation logic</li>
+                            <li>• Secure local data storage</li>
+                            <li>• Smooth donation flow UX</li>
+                        </ul>
+                        <div class="flex gap-2">
+                            <span class="tech-tag text-[10px]">Flutter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <div class="group relative overflow-hidden rounded-2xl aspect-video glass-card border-blue-500/20">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-900/40 flex flex-col items-center justify-center p-6 text-center">
-                    <i class="fas fa-tv text-5xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="text-xl font-bold text-white">Media Streaming (TV)</h4>
-                    <p class="text-xs text-blue-300 font-mono mt-2 uppercase tracking-widest">Android TV & Apple TV</p>
-                </div>
-                <div class="absolute inset-0 bg-[#0b1120] p-8 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    <h4 class="text-lg font-bold text-blue-400 mb-2">Technical Implementation</h4>
-                    <ul class="text-sm text-slate-300 space-y-2 mb-4">
-                        <li>• Custom Focus Engine for D-Pad navigation</li>
-                        <li>• HLS/Dash Video optimization</li>
-                        <li>• Watch history & Podcast modules</li>
-                    </ul>
-                    <div class="flex gap-2">
-                        <span class="tech-tag text-[10px]">React Native TV</span>
-                        <span class="tech-tag text-[10px]">Performance</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="group relative overflow-hidden rounded-2xl aspect-video glass-card border-purple-500/20">
-                <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-900/40 flex flex-col items-center justify-center p-6 text-center">
-                    <i class="fas fa-ticket-alt text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="text-xl font-bold text-white">TBYT Event Platform</h4>
-                    <p class="text-xs text-purple-300 font-mono mt-2 uppercase tracking-widest">Fintech & Events</p>
-                </div>
-                <div class="absolute inset-0 bg-[#0b1120] p-8 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    <h4 class="text-lg font-bold text-purple-400 mb-2">Technical Implementation</h4>
-                    <ul class="text-sm text-slate-300 space-y-2 mb-4">
-                        <li>• WebSocket for real-time ticket sales</li>
-                        <li>• Split event expenses functionality</li>
-                        <li>• Stripe Payment Gateway integration</li>
-                    </ul>
-                    <div class="flex gap-2">
-                        <span class="tech-tag text-[10px]">Redux</span>
-                        <span class="tech-tag text-[10px]">WebSockets</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="group relative overflow-hidden rounded-2xl aspect-video glass-card border-pink-500/20">
-                <div class="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-red-900/40 flex flex-col items-center justify-center p-6 text-center">
-                    <i class="fas fa-spa text-5xl text-pink-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="text-xl font-bold text-white">PrettyFox</h4>
-                    <p class="text-xs text-pink-300 font-mono mt-2 uppercase tracking-widest">E-commerce / Beauty</p>
-                </div>
-                <div class="absolute inset-0 bg-[#0b1120] p-8 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    <h4 class="text-lg font-bold text-pink-400 mb-2">Technical Implementation</h4>
-                    <ul class="text-sm text-slate-300 space-y-2 mb-4">
-                        <li>• Geolocation for nearby shop discovery</li>
-                        <li>• In-app marketplace & product posting</li>
-                        <li>• Social event creation modules</li>
-                    </ul>
-                    <div class="flex gap-2">
-                        <span class="tech-tag text-[10px]">Google Maps</span>
-                        <span class="tech-tag text-[10px]">React Native</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="group relative overflow-hidden rounded-2xl aspect-video glass-card border-green-500/20">
-                <div class="absolute inset-0 bg-gradient-to-br from-green-600/20 to-emerald-900/40 flex flex-col items-center justify-center p-6 text-center">
-                    <i class="fas fa-truck text-5xl text-green-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="text-xl font-bold text-white">Valkayrie</h4>
-                    <p class="text-xs text-green-300 font-mono mt-2 uppercase tracking-widest">Logistics / Laundry</p>
-                </div>
-                <div class="absolute inset-0 bg-[#0b1120] p-8 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    <h4 class="text-lg font-bold text-green-400 mb-2">Technical Implementation</h4>
-                    <ul class="text-sm text-slate-300 space-y-2 mb-4">
-                        <li>• Real-time pickup/drop-off tracking</li>
-                        <li>• Order management system</li>
-                        <li>• Firebase Push Notifications</li>
-                    </ul>
-                    <div class="flex gap-2">
-                        <span class="tech-tag text-[10px]">Firebase</span>
-                        <span class="tech-tag text-[10px]">Real-time</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-       
-    </div>
-</section>
-
-     <section class="py-24 px-6 max-w-4xl mx-auto text-center">
+    <section class="py-24 px-6 max-w-4xl mx-auto text-center">
         <h3 class="text-2xl font-bold mb-12">Education</h3>
         <div class="grid md:grid-cols-2 gap-8">
             <div class="p-6 border border-white/5 rounded-xl bg-slate-800/20">
-                <h5 class="text-blue-400 font-bold">MCA (Master of Computer Application)</h5>
+                <h5 class="text-blue-400 font-bold">MCA</h5>
                 <p class="text-slate-300 text-sm mt-1">Gujarat Technological University</p>
                 <span class="text-slate-500 text-xs italic">GPA: 8.0 | 2016 - 2018</span>
             </div>
             <div class="p-6 border border-white/5 rounded-xl bg-slate-800/20">
-                <h5 class="text-blue-400 font-bold">BCA (Bachelor of Computer Application)</h5>
+                <h5 class="text-blue-400 font-bold">BCA</h5>
                 <p class="text-slate-300 text-sm mt-1">VNSGU, Surat</p>
                 <span class="text-slate-500 text-xs italic">GPA: 7.3 | 2013 - 2016</span>
             </div>
@@ -290,25 +277,51 @@
     <footer class="py-20 border-t border-white/5 px-6 bg-[#080d1a]">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
-                <h4 class="text-xl font-bold mb-2">Ready for the next big project.</h4>
-                <p class="text-slate-500">Expertise in Mobile, Android TV, and Apple TV development.</p>
+                <h4 class="text-xl font-bold mb-2">Let's build something extraordinary.</h4>
+                <p class="text-slate-500">Available for Senior roles in Mobile & TV App Architecture.</p>
             </div>
+            <a href="YOUR_RESUME_LINK_HERE" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-xl shadow-blue-500/25">
+                    <i class="fas fa-file-download"></i> Download Resume
+                </a>
             <div class="flex gap-6 text-2xl text-slate-400">
-                <a href="mailto:patelkaushik08dec@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/patel-kaushik-701a9515b/" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/kaushik038" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
+                <a href="mailto:patelkaushik08dec@gmail.com" title="Email"><i class="fas fa-envelope hover:text-blue-400"></i></a>
+                <a href="https://linkedin.com/in/patel-kaushik-701a9515b/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin hover:text-blue-400"></i></a>
+                <a href="https://github.com/kaushik038" target="_blank" title="GitHub"><i class="fab fa-github hover:text-blue-400"></i></a>
             </div>
-        </div>
-         <div class="flex flex-wrap gap-4 mt-10 justify-center mx-auto">
-            <a href="KAUSHIK PATEL - 7.11- RN - resume.pdf" download class="group flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">
-                <i class="fas fa-file-download animate-bounce"></i>
-                Download Resume
-            </a>
         </div>
         <div class="mt-16 text-center text-slate-700 text-[10px] uppercase tracking-[0.25em] font-bold">
-            &copy; 2025 Kaushik Patel // MCA Graduate // 7.11 Years Experience
+            &copy; 2026 Kaushik Patel // <span class="exp-years">8</span> Years Experience // Senior RN Engineer
         </div>
     </footer>
+<script>
+        function calculateExperience() {
+            // Start Date: Feb 2018 (Month is 0-indexed, so 1 = Feb)
+            const startDate = new Date(2018, 1, 1);
+            const today = new Date();
+            
+            let years = today.getFullYear() - startDate.getFullYear();
+            let months = today.getMonth() - startDate.getMonth();
 
+            // Adjust years if current month is before start month
+            if (months < 0 || (months === 0 && today.getDate() < startDate.getDate())) {
+                years--;
+                months += 12;
+            }
+
+            // Format as "Years.Months" (e.g., 7.11)
+            const totalExp = months > 0 ? `${years}.${months}` : `${years}`;
+
+            // Update all elements with class 'exp-years'
+            document.querySelectorAll('.exp-years').forEach(el => {
+                el.innerText = totalExp;
+            });
+
+            // Update footer copyright year
+            document.getElementById('copyright-year').innerText = today.getFullYear();
+        }
+
+        // Run calculation
+        calculateExperience();
+    </script>
 </body>
 </html>
