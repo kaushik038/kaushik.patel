@@ -1,301 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaushik Patel | Senior React Native Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b1120; color: #f8fafc; scroll-behavior: smooth; }
-        
-        /* Premium Background Gradient */
-        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% -20%, #1e293b 0%, #0b1120 100%); z-index: -1; }
-
-        .glass-card { background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .glass-card:hover { border-color: #3b82f6; transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-        
-        .tech-tag { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 4px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
-        
-        .code-window { background: #011627; border-radius: 12px; border: 1px solid #1e293b; font-family: monospace; }
-        
-        .animate-float { animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
-
-        .profile-border { padding: 4px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 50%; box-shadow: 0 0 25px rgba(59, 130, 246, 0.4); }
-        
-        .custom-scroll::-webkit-scrollbar { width: 5px; }
-        .custom-scroll::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b16" />
+  <meta name="description" content="Kaushik Patel — Senior React Native Developer building scalable mobile, TV, and modern digital experiences." />
+  <title>Kaushik Patel | Senior React Native & Mobile Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root {
+      --bg: #080b16; --panel: rgba(17, 23, 43, .78); --panel2: #11172b;
+      --text: #f5f7ff; --muted: #a1abc4; --line: rgba(180, 194, 255, .13);
+      --blue: #7c8cff; --cyan: #59e1e8; --violet: #b58cff; --green: #7cf2c2;
+      --radius: 22px; --max: 1160px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { font-family: Manrope, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+    body::before { content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none; background:
+      radial-gradient(ellipse at 15% 0%, rgba(77, 94, 255, .19), transparent 34%),
+      radial-gradient(ellipse at 90% 28%, rgba(36, 218, 221, .09), transparent 28%),
+      radial-gradient(ellipse at 60% 100%, rgba(143, 79, 255, .12), transparent 36%), #080b16; }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(var(--max), calc(100% - 44px)); margin-inline: auto; }
+    .mono, .eyebrow, .section-index, .date { font-family: "DM Mono", monospace; }
+    .mono, .eyebrow { color: var(--cyan); letter-spacing: .12em; text-transform: uppercase; font-size: .76rem; }
+    .navbar { position: fixed; top: 0; inset-inline: 0; z-index: 50; border-bottom: 1px solid var(--line); background: rgba(8, 11, 22, .76); backdrop-filter: blur(20px); }
+    .nav-inner { min-height: 76px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.04em; }
+    .brand-mark { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(135deg, var(--blue), var(--cyan)); color: #080b16; box-shadow: 0 0 30px #7c8cff40; }
+    .brand span:last-child { color: var(--blue); }
+    .nav-links { display: flex; align-items: center; gap: 26px; color: var(--muted); font-size: .86rem; font-weight: 700; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 999px; padding: 12px 19px; font-weight: 800; font-size: .87rem; transition: .25s ease; }
+    .nav-cta, .button-primary { color: #080b16; background: linear-gradient(110deg, var(--cyan), #a7b0ff); box-shadow: 0 8px 30px #59e1e81a; }
+    .nav-cta:hover, .button:hover { transform: translateY(-3px); box-shadow: 0 12px 34px #7c8cff35; }
+    .button-secondary { border: 1px solid var(--line); background: rgba(255,255,255,.035); }
+    .button-secondary:hover { border-color: #7c8cff88; }
+    .hero { padding: 160px 0 92px; min-height: 90vh; display: flex; align-items: center; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 70px; }
+    .availability { display: inline-flex; align-items: center; gap: 9px; padding: 7px 12px; border: 1px solid #7cf2c238; background: #7cf2c20b; border-radius: 999px; color: #b9ffe1; font-size: .75rem; font-weight: 800; margin-bottom: 24px; }
+    .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 5px #7cf2c21b; }
+    h1 { font-size: clamp(3rem, 6.5vw, 5.8rem); line-height: 1.04; letter-spacing: -.075em; margin: 18px 0 24px; font-weight: 800; }
+    .gradient-text { background: linear-gradient(100deg, #fff 5%, #9faaff 45%, #63e5e5 90%); color: transparent; background-clip: text; -webkit-background-clip: text; }
+    .hero-copy { color: var(--muted); max-width: 650px; font-size: clamp(1rem, 1.5vw, 1.17rem); line-height: 1.9; }
+    .hero-copy strong { color: var(--text); font-weight: 700; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin: 30px 0 30px; }
+    .socials { display: flex; align-items: center; gap: 17px; color: var(--muted); font-size: 1.1rem; }
+    .socials a:hover { color: var(--cyan); }
+    .hero-visual { position: relative; min-height: 460px; display: grid; place-items: center; }
+    .orb { position: absolute; width: 330px; height: 330px; border-radius: 50%; background: conic-gradient(from 10deg, #7c8cff, #59e1e8, #b58cff, #7c8cff); filter: blur(1px); opacity: .78; animation: orbit 16s linear infinite; }
+    .orb::before { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: #0a0e1c; }
+    .orb::after { content: ""; position: absolute; inset: 35px; border-radius: 50%; border: 1px solid #aebaff40; box-shadow: 0 0 65px #7c8cff25, inset 0 0 50px #59e1e80d; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    .profile-wrap { position: relative; z-index: 2; width: 215px; height: 215px; padding: 5px; border-radius: 50%; background: linear-gradient(135deg, var(--cyan), var(--blue), var(--violet)); box-shadow: 0 0 70px #7c8cff40; }
+    .profile-wrap img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 5px solid #0b1020; display: block; }
+    .floating-card { position: absolute; z-index: 3; border: 1px solid var(--line); border-radius: 16px; padding: 13px 16px; background: rgba(13, 18, 36, .88); backdrop-filter: blur(18px); box-shadow: 0 15px 45px #0005; font-size: .78rem; }
+    .floating-card i { color: var(--cyan); margin-right: 8px; }
+    .float-top { top: 56px; right: 0; animation: bob 5s ease-in-out infinite; }
+    .float-bottom { bottom: 48px; left: -4px; animation: bob 6s ease-in-out infinite reverse; }
+    @keyframes bob { 50% { transform: translateY(-9px); } }
+    .code-chip { position: absolute; right: 2%; bottom: 5%; color: #b6c4e8; font: .72rem "DM Mono", monospace; opacity: .7; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding-bottom: 85px; }
+    .stat { padding: 22px; border: 1px solid var(--line); border-radius: 17px; background: #ffffff04; }
+    .stat strong { display: block; font-size: 1.65rem; letter-spacing: -.06em; }
+    .stat span { color: var(--muted); font-size: .8rem; }
+    section.content-section { padding: 88px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 36px; }
+    .section-index { color: var(--cyan); font-size: .8rem; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; letter-spacing: -.06em; margin-top: 9px; }
+    .section-desc { color: var(--muted); max-width: 500px; font-size: .94rem; }
+    .panel { border: 1px solid var(--line); background: linear-gradient(145deg, rgba(20, 27, 51, .88), rgba(13, 18, 35, .72)); border-radius: var(--radius); }
+    .ai-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 20px; }
+    .ai-feature { padding: 30px; position: relative; overflow: hidden; }
+    .ai-feature::after { content: ""; position: absolute; width: 200px; height: 200px; right: -65px; top: -75px; background: #7c8cff24; filter: blur(55px); border-radius: 50%; }
+    .ai-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 15px; color: #07101b; background: linear-gradient(135deg, var(--cyan), #a7b0ff); font-size: 1.2rem; margin-bottom: 20px; }
+    h3 { font-size: 1.2rem; letter-spacing: -.03em; margin-bottom: 10px; }
+    .panel p { color: var(--muted); font-size: .91rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .tag { border: 1px solid #8b9cff30; background: #7c8cff0d; color: #c1caff; padding: 6px 10px; border-radius: 8px; font-size: .74rem; font-weight: 800; }
+    .ai-side { padding: 28px; display: flex; flex-direction: column; gap: 18px; }
+    .feature-line { display: flex; gap: 13px; }
+    .feature-line i { color: var(--cyan); margin-top: 5px; width: 18px; }
+    .feature-line strong { display: block; font-size: .9rem; margin-bottom: 2px; }
+    .feature-line span { color: var(--muted); font-size: .82rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .skill-card { padding: 23px; transition: transform .25s, border-color .25s; }
+    .skill-card:hover, .project-card:hover { transform: translateY(-5px); border-color: #7c8cff66; }
+    .skill-card .skill-icon { font-size: 1.25rem; color: var(--cyan); margin-bottom: 15px; }
+    .skill-card h3 { font-size: 1rem; }
+    .skill-card .tag-list { gap: 7px; margin-top: 14px; }
+    .skill-card .tag { font-size: .68rem; padding: 5px 8px; }
+    .timeline { position: relative; display: grid; gap: 18px; }
+    .timeline::before { content: ""; position: absolute; left: 18px; top: 25px; bottom: 25px; width: 1px; background: linear-gradient(var(--cyan), #7c8cff33, transparent); }
+    .experience { position: relative; display: grid; grid-template-columns: 38px 1fr; gap: 20px; }
+    .timeline-dot { position: relative; z-index: 1; width: 37px; height: 37px; border-radius: 50%; border: 1px solid #59e1e86b; background: #0b1424; display: grid; place-items: center; color: var(--cyan); }
+    .experience-body { padding: 25px 27px; }
+    .experience-top { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .experience h3 { margin: 4px 0 0; font-size: 1.15rem; }
+    .company { color: var(--muted); font-weight: 600; }
+    .date { color: var(--cyan); font-size: .73rem; }
+    .experience ul { color: var(--muted); padding-left: 19px; font-size: .88rem; }
+    .experience li { padding: 4px 0; }
+    .current-badge { border: 1px solid #7cf2c238; color: #a7f9d6; background: #7cf2c20c; border-radius: 999px; font-size: .68rem; padding: 4px 9px; font-weight: 800; }
+    .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .project-card { overflow: hidden; transition: transform .25s, border-color .25s; }
+    .project-art { min-height: 160px; display: grid; place-items: center; position: relative; overflow: hidden; background: radial-gradient(circle at 30% 20%, #6577ff48, transparent 45%), linear-gradient(135deg, #141d3a, #0e1428); }
+    .project-art::before, .project-art::after { content: ""; position: absolute; border: 1px solid #a9b6ff20; border-radius: 50%; width: 200px; height: 200px; }
+    .project-art::after { width: 145px; height: 145px; }
+    .project-art i { position: relative; z-index: 1; font-size: 2.7rem; color: var(--cyan); filter: drop-shadow(0 0 18px #59e1e84a); }
+    .project-body { padding: 23px; }
+    .project-body h3 { font-size: 1.08rem; }
+    .project-body p { min-height: 78px; }
+    .project-body .tag-list { margin-top: 16px; }
+    .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .education { padding: 25px; display: flex; align-items: flex-start; gap: 17px; }
+    .education-icon { width: 44px; height: 44px; flex: 0 0 44px; display: grid; place-items: center; border-radius: 13px; background: #7c8cff15; color: var(--cyan); }
+    .education h3 { margin: 0 0 4px; }
+    .education p { font-size: .85rem; }
+    .contact-panel { padding: clamp(28px, 5vw, 55px); text-align: center; position: relative; overflow: hidden; }
+    .contact-panel::before { content: ""; position: absolute; width: 300px; height: 200px; left: calc(50% - 150px); top: -150px; border-radius: 50%; background: #7c8cff38; filter: blur(60px); }
+    .contact-panel h2 { position: relative; margin: 10px auto 15px; max-width: 700px; }
+    .contact-panel p { position: relative; max-width: 600px; margin: 0 auto; }
+    .contact-actions { position: relative; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; color: #77819d; font-size: .78rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 20px; }
+      .hero { padding-top: 135px; }
+      .hero-visual { min-height: 400px; }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+      .ai-grid { grid-template-columns: 1fr; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 30px, var(--max)); }
+      .nav-inner { min-height: 67px; }
+      .nav-links { gap: 14px; font-size: .75rem; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .nav-cta { padding: 9px 13px; font-size: .78rem; }
+      .hero { min-height: auto; padding: 120px 0 60px; }
+      h1 { font-size: clamp(2.8rem, 14vw, 4.2rem); }
+      .hero-visual { min-height: 350px; }
+      .orb { width: 260px; height: 260px; }
+      .profile-wrap { width: 175px; height: 175px; }
+      .float-top { right: 0; top: 25px; }
+      .float-bottom { left: 0; bottom: 25px; }
+      .stats { grid-template-columns: repeat(2, 1fr); padding-bottom: 50px; }
+      .stat { padding: 17px; }
+      .stat strong { font-size: 1.4rem; }
+      section.content-section { padding: 62px 0; }
+      .skills-grid, .projects-grid, .education-grid { grid-template-columns: 1fr; }
+      .experience { gap: 12px; grid-template-columns: 30px 1fr; }
+      .timeline::before { left: 14px; }
+      .timeline-dot { width: 30px; height: 30px; font-size: .75rem; }
+      .experience-body { padding: 20px; }
+      .project-body p { min-height: 0; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
 </head>
 <body>
-    <div class="bg-glow"></div>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Kaushik Patel home">
+        <span class="brand-mark"><i class="fa-solid fa-code"></i></span>
+        <span>KAUSHIK<span>.</span>PATEL</span>
+      </a>
+      <div class="nav-links">
+        <a href="#ai">AI & Innovation</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a class="nav-cta" href="mailto:patelkaushik08dec@gmail.com">Let's Talk <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+  </nav>
 
-    <nav class="fixed w-full z-50 bg-[#0b1120]/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <i class="fab fa-react text-2xl text-[#61DAFB] animate-spin-slow"></i>
-                <span class="text-xl font-bold tracking-tighter uppercase">Kaushik<span class="text-blue-500">.</span>Patel</span>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium items-center">
-                <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
-                <a href="#projects" class="hover:text-blue-400 transition">Work</a>
-                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-                <a href="mailto:patelkaushik08dec@gmail.com" class="text-blue-400 border border-blue-400/50 px-5 py-2 rounded-full hover:bg-blue-400 hover:text-white transition">Hire Me</a>
-            </div>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="availability"><span class="pulse"></span> Open to the right opportunity</div>
+          <div class="eyebrow">Senior React Native Developer · Mobile & TV</div>
+          <h1>Building digital<br><span class="gradient-text">experiences that</span><br>move people.</h1>
+          <p class="hero-copy">I'm <strong>Kaushik Patel</strong> — a senior mobile engineer focused on building reliable, polished applications across <strong>iOS, Android, Android TV and Apple TV</strong>. I turn complex product requirements into scalable, user-friendly experiences, with a practical interest in AI-assisted engineering.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my work <i class="fa-solid fa-arrow-down"></i></a>
+            <a class="button button-secondary" href="Kaushik%20Patel-7y-React-Native-Developer.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> View résumé</a>
+          </div>
+          <div class="socials">
+            <a href="mailto:patelkaushik08dec@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/patel-kaushik-701a9515b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/kaushik038" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <span class="mono" style="font-size:.68rem;color:var(--muted)">SURAT, INDIA · REMOTE FRIENDLY</span>
+          </div>
         </div>
-    </nav>
-
-    <section class="pt-48 pb-20 px-6 max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-12 gap-16 items-center">
-            <div class="lg:col-span-7">
-                <h2 class="text-blue-500 font-mono mb-4 text-lg">Senior Software Engineer</h2>
-                <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tight text-white">Kaushik Patel</h1>
-                <p class="text-xl text-slate-400 mb-8 leading-relaxed max-w-xl">
-                    Turning complex ideas into scalable code with <span class="text-blue-400"><span class="exp-years">7.7</span></span> years</span> of expertise in building high-performance <span class="text-blue-400">Mobile & TV</span> ecosystems.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <div class="flex items-center gap-2 bg-slate-800/40 px-4 py-2 rounded-lg border border-white/5 shadow-xl"><i class="fab fa-react text-blue-400"></i> React Native</div>
-                    <div class="flex items-center gap-2 bg-slate-800/40 px-4 py-2 rounded-lg border border-white/5 shadow-xl"><i class="fab fa-android text-green-400"></i> Android TV</div>
-                    <div class="flex items-center gap-2 bg-slate-800/40 px-4 py-2 rounded-lg border border-white/5 shadow-xl"><i class="fab fa-apple text-slate-300"></i> Apple TV</div>
-                    <div class="flex items-center gap-2 bg-slate-800/40 px-4 py-2 rounded-lg border border-white/5 shadow-xl"><i class="fas fa-mobile-alt text-purple-400"></i> Flutter</div>
-                </div>
-            </div>
-
-            <div class="lg:col-span-5 relative animate-float">
-                <div class="flex justify-center mb-[-40px] relative z-20">
-                    <div class="profile-border">
-                        <img src="kaushikPatel.png" alt="Kaushik Patel" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-[#0b1120] object-cover">
-                    </div>
-                </div>
-                
-                <div class="code-window p-8 pt-16 shadow-2xl relative z-10 overflow-hidden">
-                    <div class="flex gap-2 absolute top-6 left-8">
-                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                    <div class="space-y-2 text-sm md:text-base font-mono mt-4">
-                        <p><span class="text-pink-500">const</span> <span class="text-yellow-400">developer</span> = {</p>
-                        <p class="pl-4">exp_years: <span class="text-orange-400"><span class="exp-years">7.7</span></span>,</p>
-                        <p class="pl-4">specialty: <span class="text-green-400">'Cross-Platform TV & Mobile'</span>,</p>
-                        <p class="pl-4">architecture: <span class="text-green-400">'Scalable UI & Performance'</span>,</p>
-                        <p class="pl-4">status: <span class="text-green-400">'Ready to Build'</span></p>
-                        <p><span class="text-pink-500">}</span>;</p>
-                        <br>
-                        <p class="text-blue-400">// Transforming UX since 2018</p>
-                        <p class="text-white">kaushik.optimize();</p>
-                    </div>
-                </div>
-                <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-600/30 rounded-full blur-[100px] z-0"></div>
-            </div>
+        <div class="hero-visual reveal" aria-label="Developer profile visual">
+          <div class="orb"></div>
+          <div class="profile-wrap"><img src="kaushikPatel.png" alt="Kaushik Patel profile photo" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=&quot;width:100%;height:100%;border-radius:50%;display:grid;place-items:center;background:#121a31;color:#59e1e8;font-size:4rem&quot;><i class=&quot;fa-solid fa-user-astronaut&quot;></i></div>';"></div>
+          <div class="floating-card float-top"><i class="fa-solid fa-wand-magic-sparkles"></i>AI-assisted workflow</div>
+          <div class="floating-card float-bottom"><i class="fa-solid fa-tv"></i>Mobile + TV specialist</div>
+          <div class="code-chip">const impact = buildWithPurpose();</div>
         </div>
+      </div>
     </section>
 
-    <section id="skills" class="py-24 bg-slate-900/30">
-        <div class="max-w-7xl mx-auto px-6">
-            <h3 class="text-3xl font-bold mb-12 flex items-center gap-4">
-                <span class="text-blue-500 text-sm font-mono">01.</span> Core Competencies
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card p-6 rounded-xl">
-                    <h4 class="text-blue-400 font-bold mb-4"><i class="fas fa-layer-group mr-2"></i>Frontend</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag">React Native</span><span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Next.js</span><span class="tech-tag">JavaScript ES6+</span>
-                        <span class="tech-tag">Flutter</span>
-                    </div>
-                </div>
-                <div class="glass-card p-6 rounded-xl">
-                    <h4 class="text-blue-400 font-bold mb-4"><i class="fas fa-database mr-2"></i>State & Data</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag">Redux-Saga/Thunk</span><span class="tech-tag">React Query</span>
-                        <span class="tech-tag">Context API</span><span class="tech-tag">GraphQL</span>
-                        <span class="tech-tag">REST APIs</span>
-                    </div>
-                </div>
-                <div class="glass-card p-6 rounded-xl">
-                    <h4 class="text-blue-400 font-bold mb-4"><i class="fas fa-tv mr-2"></i>Specialized</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag">Android TV</span><span class="tech-tag">Apple TV</span>
-                        <span class="tech-tag">HLS/Dash</span><span class="tech-tag">Focus Engine</span>
-                        <span class="tech-tag">Video Player Optimization</span>
-                    </div>
-                </div>
-                <div class="glass-card p-6 rounded-xl">
-                    <h4 class="text-blue-400 font-bold mb-4"><i class="fas fa-tools mr-2"></i>Infrastructure</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag">Firebase</span><span class="tech-tag">CI/CD</span>
-                        <span class="tech-tag">WebSocket</span><span class="tech-tag">Realm/SQLite</span>
-                        <span class="tech-tag">Jest</span>
-                    </div>
-                </div>
-            </div>
+    <div class="container stats reveal">
+      <div class="stat"><strong>7+ years</strong><span>Software development</span></div>
+      <div class="stat"><strong>Mobile + TV</strong><span>Cross-platform experience</span></div>
+      <div class="stat"><strong>End-to-end</strong><span>Build, ship & maintain</span></div>
+      <div class="stat"><strong>Client-first</strong><span>Communication & delivery</span></div>
+    </div>
+
+    <section class="content-section" id="ai">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="section-index">01 / AI & INNOVATION</div><h2>Engineering, amplified.</h2></div>
+          <p class="section-desc">A modern development approach: use AI as a practical copilot while keeping architecture, code quality, security and product decisions human-led.</p>
         </div>
+        <div class="ai-grid">
+          <article class="panel ai-feature reveal">
+            <div class="ai-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>AI-assisted product development</h3>
+            <p>I use modern developer workflows to move from idea to implementation faster — while reviewing generated code carefully, testing edge cases and maintaining production standards.</p>
+            <div class="tag-list">
+              <span class="tag">AI coding assistants</span><span class="tag">Prompt-driven workflows</span><span class="tag">Code review</span><span class="tag">Debugging support</span><span class="tag">Documentation</span>
+            </div>
+          </article>
+          <article class="panel ai-side reveal">
+            <div class="feature-line"><i class="fa-solid fa-bolt"></i><div><strong>Faster iteration</strong><span>Explore implementation options and reduce repetitive development work.</span></div></div>
+            <div class="feature-line"><i class="fa-solid fa-shield-halved"></i><div><strong>Quality stays first</strong><span>Validate output, protect sensitive data, and test before shipping.</span></div></div>
+            <div class="feature-line"><i class="fa-solid fa-puzzle-piece"></i><div><strong>Ready for AI integrations</strong><span>Interested in integrating APIs and intelligent features into useful mobile experiences.</span></div></div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="experience" class="py-24 px-6 max-w-5xl mx-auto">
-        <h3 class="text-3xl font-bold mb-16 flex items-center gap-4">
-            <span class="text-blue-500 text-sm font-mono">02.</span> Professional Experience
-        </h3>
-        
-        <div class="space-y-16">
-            <div class="relative pl-16">
-                <div class="absolute left-0 top-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                    <i class="fas fa-briefcase text-xs text-white"></i>
-                </div>
-                <span class="text-blue-400 font-mono text-sm uppercase">May 2024 — Dec 2025</span>
-                <h4 class="text-2xl font-bold text-white mt-1">Logicwind <span class="text-slate-500 font-normal">| Senior React Native Developer</span></h4>
-                <ul class="text-slate-400 mt-4 list-disc space-y-2 pl-4">
-                    <li>Architected scalable mobile solutions reducing technical debt via clean code principles.</li>
-                    <li>Increased user retention by 25% through startup time and frame rate optimization.</li>
-                    <li>Led code reviews and mentored junior developers to maintain 100% industry standards.</li>
-                </ul>
-            </div>
-
-            <div class="relative pl-16">
-                <div class="absolute left-0 top-0 w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10">
-                    <i class="fas fa-briefcase text-xs text-white"></i>
-                </div>
-                <span class="text-slate-500 font-mono text-sm uppercase">Oct 2022 — Apr 2024</span>
-                <h4 class="text-2xl font-bold text-white mt-1">Techtic Technolab <span class="text-slate-500 font-normal">| Sr. React Native Developer</span></h4>
-                <ul class="text-slate-400 mt-4 list-disc space-y-2 pl-4">
-                    <li>Engineered complex Stripe/Razorpay payment gateways and Google Maps API integrations.</li>
-                    <li>Developed predictable Redux data flow improving stability across fragmented Android versions.</li>
-                    <li>Translated high-fidelity Figma designs into pixel-perfect responsive components.</li>
-                </ul>
-            </div>
-
-            <div class="relative pl-16">
-                <div class="absolute left-0 top-0 w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10">
-                    <i class="fas fa-briefcase text-xs text-white"></i>
-                </div>
-                <span class="text-slate-500 font-mono text-sm uppercase">Dec 2020 — Oct 2022</span>
-                <h4 class="text-2xl font-bold text-white mt-1">LogixBuilt <span class="text-slate-500 font-normal">| React Native Developer</span></h4>
-                <p class="text-slate-400 mt-4">Owned the full SDLC for 3+ major client projects, managing everything from requirement gathering to Play Store/App Store deployment.</p>
-            </div>
-
-            <div class="relative pl-16">
-                <div class="absolute left-0 top-0 w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-4 border-[#0b1120] z-10">
-                    <i class="fas fa-briefcase text-xs text-white"></i>
-                </div>
-                <span class="text-slate-500 font-mono text-sm uppercase">Feb 2018 — Nov 2020</span>
-                <h4 class="text-2xl font-bold text-white mt-1">I-Pangram <span class="text-slate-500 font-normal">| React Native Developer</span></h4>
-                <p class="text-slate-400 mt-4">Developed high-performance UI and local data persistence via Realm for early-stage startup products.</p>
-            </div>
+    <section class="content-section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="section-index">02 / TOOLKIT</div><h2>Skills built for shipping.</h2></div>
+          <p class="section-desc">A practical toolkit spanning cross-platform UI, state management, streaming experiences, integrations and release workflows.</p>
         </div>
+        <div class="skills-grid">
+          <article class="panel skill-card reveal"><div class="skill-icon"><i class="fa-brands fa-react"></i></div><h3>App Development</h3><p>Responsive, maintainable user experiences.</p><div class="tag-list"><span class="tag">React Native</span><span class="tag">TypeScript</span><span class="tag">React.js</span><span class="tag">Next.js</span><span class="tag">JavaScript ES6+</span></div></article>
+          <article class="panel skill-card reveal"><div class="skill-icon"><i class="fa-solid fa-diagram-project"></i></div><h3>State & Architecture</h3><p>Predictable data flow and modular code.</p><div class="tag-list"><span class="tag">Redux</span><span class="tag">Saga / Thunk</span><span class="tag">React Query</span><span class="tag">Context API</span><span class="tag">Clean architecture</span></div></article>
+          <article class="panel skill-card reveal"><div class="skill-icon"><i class="fa-solid fa-tv"></i></div><h3>TV & Streaming</h3><p>Remote-friendly interfaces and playback.</p><div class="tag-list"><span class="tag">Android TV</span><span class="tag">Apple TV</span><span class="tag">Focus Engine</span><span class="tag">HLS / DASH</span><span class="tag">Player optimization</span></div></article>
+          <article class="panel skill-card reveal"><div class="skill-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div><h3>Integrations & Delivery</h3><p>Connected products and reliable releases.</p><div class="tag-list"><span class="tag">REST / GraphQL</span><span class="tag">Firebase</span><span class="tag">WebSocket</span><span class="tag">Stripe / Razorpay</span><span class="tag">CI/CD</span><span class="tag">Jest</span></div></article>
+        </div>
+      </div>
     </section>
 
-    <section id="projects" class="py-24 bg-slate-900/50 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h3 class="text-3xl font-bold mb-16 flex items-center gap-4">
-                <span class="text-blue-500 text-sm font-mono">03.</span> Key Projects
-            </h3>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="group relative overflow-hidden rounded-2xl aspect-video glass-card border-blue-500/20">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-900/40 flex flex-col items-center justify-center p-6 text-center">
-                        <i class="fas fa-tv text-5xl text-blue-400 mb-4"></i>
-                        <h4 class="text-xl font-bold text-white">Media Platform</h4>
-                        <p class="text-xs text-blue-300 font-mono mt-2 uppercase">TV & Mobile Streaming</p>
-                    </div>
-                    <div class="absolute inset-0 bg-[#0b1120] p-6 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                        <h4 class="text-lg font-bold text-blue-400 mb-2 text-sm">Custom Player & UI</h4>
-                        <ul class="text-[12px] text-slate-300 space-y-1 mb-4">
-                            <li>• Video/Podcast Carousel & Grids</li>
-                            <li>• Custom Play/Pause/Seek controls</li>
-                            <li>• Background audio for podcasts</li>
-                            <li>• Featured media management</li>
-                        </ul>
-                        <div class="flex gap-2">
-                            <span class="tech-tag text-[10px]">React Native</span>
-                            <span class="tech-tag text-[10px]">React Native TV OS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-2xl aspect-video glass-card border-purple-500/20">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-900/40 flex flex-col items-center justify-center p-6 text-center">
-                        <i class="fas fa-ticket-alt text-5xl text-purple-400 mb-4"></i>
-                        <h4 class="text-xl font-bold text-white">TBYT Platform</h4>
-                        <p class="text-xs text-purple-300 font-mono mt-2 uppercase">Event Management</p>
-                    </div>
-                    <div class="absolute inset-0 bg-[#0b1120] p-6 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                        <h4 class="text-lg font-bold text-purple-400 mb-2 text-sm">Organizer & User Apps</h4>
-                        <ul class="text-[12px] text-slate-300 space-y-1 mb-4">
-                            <li>• Location-based event discovery</li>
-                            <li>• Ticket & Menu booking flows</li>
-                            <li>• Table configuration dashboard</li>
-                            <li>• Scalable reusable components</li>
-                        </ul>
-                        <div class="flex gap-2">
-                            <span class="tech-tag text-[10px]">React Native</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-2xl aspect-video glass-card border-green-500/20">
-                    <div class="absolute inset-0 bg-gradient-to-br from-green-600/20 to-emerald-900/40 flex flex-col items-center justify-center p-6 text-center">
-                        <i class="fas fa-hand-holding-heart text-5xl text-green-400 mb-4"></i>
-                        <h4 class="text-xl font-bold text-white">Carfour</h4>
-                        <p class="text-xs text-green-300 font-mono mt-2 uppercase">Donation Service</p>
-                    </div>
-                    <div class="absolute inset-0 bg-[#0b1120] p-6 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                        <h4 class="text-lg font-bold text-green-400 mb-2 text-sm">Offline QR Donations</h4>
-                        <ul class="text-[12px] text-slate-300 space-y-1 mb-4">
-                            <li>• Offline QR scanning & sync</li>
-                            <li>• Custom validation logic</li>
-                            <li>• Secure local data storage</li>
-                            <li>• Smooth donation flow UX</li>
-                        </ul>
-                        <div class="flex gap-2">
-                            <span class="tech-tag text-[10px]">Flutter</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="content-section" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="section-index">03 / CAREER</div><h2>Experience that delivers.</h2></div>
+          <p class="section-desc">From independent client work to product teams, focused on maintainable code, clear communication and dependable delivery.</p>
         </div>
+        <div class="timeline">
+          <article class="experience reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="panel experience-body">
+              <div class="experience-top"><div><div class="date">JAN 2026 — PRESENT · 10 MONTHS</div><h3>Freelance Senior React Native Developer</h3><div class="company">Independent / Client Projects</div></div><span class="current-badge">CURRENT</span></div>
+              <ul>
+                <li>Deliver mobile application features and improvements based on client requirements and project priorities.</li>
+                <li>Work directly with stakeholders to clarify scope, share progress, troubleshoot issues and coordinate delivery.</li>
+                <li>Build reusable React Native components, integrate APIs, and improve app reliability and performance.</li>
+                <li>Use AI-assisted development tools where useful, with code review and testing before delivery.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="panel experience-body">
+              <div class="experience-top"><div><div class="date">MAY 2024 — DEC 2025</div><h3>Senior React Native Developer</h3><div class="company">Logicwind</div></div></div>
+              <ul><li>Developed scalable mobile solutions with a focus on clean code, reusable components and maintainability.</li><li>Worked on performance improvements, code reviews and mentoring to strengthen application quality.</li><li>Collaborated with teams to translate product requirements into reliable mobile features.</li></ul>
+            </div>
+          </article>
+          <article class="experience reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="panel experience-body">
+              <div class="experience-top"><div><div class="date">OCT 2022 — APR 2024</div><h3>Senior React Native Developer</h3><div class="company">Techtic Technolab</div></div></div>
+              <ul><li>Integrated payment gateways including Stripe and Razorpay, plus Google Maps and external APIs.</li><li>Implemented Redux-based data flows and responsive UI from high-fidelity designs.</li><li>Worked across Android and iOS, supporting stability and maintainable delivery.</li></ul>
+            </div>
+          </article>
+          <article class="experience reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="panel experience-body">
+              <div class="experience-top"><div><div class="date">DEC 2020 — OCT 2022</div><h3>React Native Developer</h3><div class="company">LogixBuilt</div></div></div>
+              <ul><li>Owned development tasks across client projects, from requirement discussions to store deployment.</li><li>Built mobile features and coordinated fixes through testing and release cycles.</li></ul>
+            </div>
+          </article>
+          <article class="experience reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="panel experience-body">
+              <div class="experience-top"><div><div class="date">FEB 2018 — NOV 2020</div><h3>React Native Developer</h3><div class="company">I-Pangram</div></div></div>
+              <ul><li>Built mobile UI and local data persistence for early-stage products, including work with Realm.</li><li>Contributed to feature development, debugging and improving day-to-day app usability.</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="py-24 px-6 max-w-4xl mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-12">Education</h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="p-6 border border-white/5 rounded-xl bg-slate-800/20">
-                <h5 class="text-blue-400 font-bold">MCA</h5>
-                <p class="text-slate-300 text-sm mt-1">Gujarat Technological University</p>
-                <span class="text-slate-500 text-xs italic">GPA: 8.0 | 2016 - 2018</span>
-            </div>
-            <div class="p-6 border border-white/5 rounded-xl bg-slate-800/20">
-                <h5 class="text-blue-400 font-bold">BCA</h5>
-                <p class="text-slate-300 text-sm mt-1">VNSGU, Surat</p>
-                <span class="text-slate-500 text-xs italic">GPA: 7.3 | 2013 - 2016</span>
-            </div>
+    <section class="content-section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="section-index">04 / SELECTED WORK</div><h2>Products, not just screens.</h2></div>
+          <p class="section-desc">A selection of application experiences across streaming, events and offline-first workflows.</p>
         </div>
+        <div class="projects-grid">
+          <article class="panel project-card reveal"><div class="project-art"><i class="fa-solid fa-tv"></i></div><div class="project-body"><h3>Media Streaming Platform</h3><p>TV and mobile streaming experience with media browsing, custom playback controls, video and podcast content, and focus-friendly navigation.</p><div class="tag-list"><span class="tag">React Native</span><span class="tag">TV OS</span><span class="tag">HLS / DASH</span><span class="tag">TypeScript</span></div></div></article>
+          <article class="panel project-card reveal"><div class="project-art" style="background:radial-gradient(circle at 30% 20%,#b58cff42,transparent 45%),linear-gradient(135deg,#211538,#0e1428)"><i class="fa-solid fa-ticket"></i></div><div class="project-body"><h3>TBYT Event Platform</h3><p>Event discovery and organizer tools with ticket and menu booking flows, table configuration, and reusable mobile components.</p><div class="tag-list"><span class="tag">React Native</span><span class="tag">Maps</span><span class="tag">API integration</span></div></div></article>
+          <article class="panel project-card reveal"><div class="project-art" style="background:radial-gradient(circle at 30% 20%,#7cf2c238,transparent 45%),linear-gradient(135deg,#102b2b,#0e1428)"><i class="fa-solid fa-hand-holding-heart"></i></div><div class="project-body"><h3>Carfour Donation App</h3><p>Offline QR donation workflow with validation, local data handling and synchronization when connectivity becomes available.</p><div class="tag-list"><span class="tag">Flutter</span><span class="tag">QR scanning</span><span class="tag">Offline-first</span></div></div></article>
+          <article class="panel project-card reveal"><div class="project-art" style="background:radial-gradient(circle at 30% 20%,#ffb86b30,transparent 45%),linear-gradient(135deg,#2c1d28,#0e1428)"><i class="fa-solid fa-cash-register"></i></div><div class="project-body"><h3>EATONLINE POS</h3><p>POS dashboard and reservation workflows, order status handling, payment-state UI, device-specific behavior and external printer support.</p><div class="tag-list"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">POS / MDM</span><span class="tag">Printing</span></div></div></article>
+          <article class="panel project-card reveal"><div class="project-art" style="background:radial-gradient(circle at 30% 20%,#59e1e838,transparent 45%),linear-gradient(135deg,#10233b,#0e1428)"><i class="fa-solid fa-shirt"></i></div><div class="project-body"><h3>Marketplace & Lifestyle Apps</h3><p>Consumer-facing mobile shopping and service experiences with reusable UI, API-connected screens and streamlined user journeys.</p><div class="tag-list"><span class="tag">React Native</span><span class="tag">REST APIs</span><span class="tag">UI engineering</span></div></div></article>
+          <article class="panel project-card reveal"><div class="project-art" style="background:radial-gradient(circle at 30% 20%,#7c8cff3b,transparent 45%),linear-gradient(135deg,#17203c,#0e1428)"><i class="fa-solid fa-screwdriver-wrench"></i></div><div class="project-body"><h3>Developer Tooling & Releases</h3><p>Build configuration, environment-specific behavior, CI/CD improvements, error monitoring and release preparation for mobile apps.</p><div class="tag-list"><span class="tag">Expo</span><span class="tag">Fastlane</span><span class="tag">Sentry</span><span class="tag">CI/CD</span></div></div></article>
+        </div>
+      </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5 px-6 bg-[#080d1a]">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-center md:text-left">
-                <h4 class="text-xl font-bold mb-2">Let's build something extraordinary.</h4>
-                <p class="text-slate-500">Available for Senior roles in Mobile & TV App Architecture.</p>
-            </div>
-          
-            <div class="flex gap-6 text-2xl text-slate-400">
-                <a href="mailto:patelkaushik08dec@gmail.com" title="Email"><i class="fas fa-envelope hover:text-blue-400"></i></a>
-                <a href="https://linkedin.com/in/patel-kaushik-701a9515b/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin hover:text-blue-400"></i></a>
-                <a href="https://github.com/kaushik038" target="_blank" title="GitHub"><i class="fab fa-github hover:text-blue-400"></i></a>
-            </div>
+    <section class="content-section" id="education">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-index">05 / EDUCATION</div><h2>Strong foundations.</h2></div></div>
+        <div class="education-grid">
+          <article class="panel education reveal"><div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div><div><h3>Master of Computer Applications (MCA)</h3><p>Gujarat Technological University</p><p class="date" style="margin-top:8px">2016 — 2018 · GPA 8.0</p></div></article>
+          <article class="panel education reveal"><div class="education-icon"><i class="fa-solid fa-book-open"></i></div><div><h3>Bachelor of Computer Applications (BCA)</h3><p>VNSGU, Surat</p><p class="date" style="margin-top:8px">2013 — 2016 · GPA 7.3</p></div></article>
         </div>
-           <div class="flex justify-center pt-16">
-            <a href="Kaushik Patel-7y-React-Native-Developer.pdf" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-xl shadow-blue-500/25">
-                    <i class="fas fa-file-download"></i> Download Resume
-                </a>
-             </div>
-        <div class="mt-16 text-center text-slate-700 text-[10px] uppercase tracking-[0.25em] font-bold">
-            &copy; 2026 Kaushik Patel // <span class="exp-years">7.7</span> Years Experience // Senior RN Engineer
-        </div>
-    </footer>
+      </div>
+    </section>
 
+    <section class="content-section" id="contact">
+      <div class="container">
+        <div class="panel contact-panel reveal">
+          <div class="eyebrow">Have a product in mind?</div>
+          <h2>Let's build something <span class="gradient-text">meaningful.</span></h2>
+          <p>Looking for a senior React Native engineer for a product team, freelance project or mobile/TV experience? Let's talk about the problem you're solving.</p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:patelkaushik08dec@gmail.com">Contact me <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="button button-secondary" href="https://linkedin.com/in/patel-kaushik-701a9515b/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> Connect on LinkedIn</a>
+            <a class="button button-secondary" href="Kaushik Patel-8y-React-Native-Developer.pdf.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Résumé PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© <span id="year">2026</span> Kaushik Patel. Built with curiosity and care.</span><span class="mono" style="font-size:.68rem">REACT NATIVE · MOBILE · TV · AI-ASSISTED ENGINEERING</span></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
